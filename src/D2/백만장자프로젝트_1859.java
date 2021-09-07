@@ -20,22 +20,26 @@ public class 백만장자프로젝트_1859 {
 			for (int j = 0; j < num; j++) {
 				arr[j] = sc.nextInt();
 			}
-			calc(1, arr[0]);
+			sb.append("#" + (i + 1) + " ");
+			calc();
 		}
+
+		System.out.println(sb);
 
 	}
 
-	private static void calc(int depth, int value) {
-		if (depth == num) {
-			return;
+	private static void calc() {
+		max = arr[num - 1];
+		long result = 0; // 백만이 넘어가기 떄문에 long타입을 써야된다!! 타입 신경쓰기
+		for (int i = num - 2; i >= 0; i--) {
+			if (arr[i] < max) {
+				result += (max - arr[i]);
+			} else if (arr[i] > max) {
+				max = arr[i];
+			} else
+				continue;
 		}
-
-		if (value > arr[depth]) {
-			max = arr[depth];
-			calc(depth + 1, arr[depth]);
-		}else if(value <= arr[depth]) {
-			calc(depth+1, value);
-		}
-
+		sb.append(result).append("\n");
 	}
+
 }
