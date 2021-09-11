@@ -15,6 +15,7 @@ public class 간단한369게임_1926 {
 		for (int i = 1; i <= n; i++) {
 			temp = String.valueOf(i);
 			calc();
+			
 			if (result.contains("-")) {
 				sb.append(result).append(" ");
 			} else
