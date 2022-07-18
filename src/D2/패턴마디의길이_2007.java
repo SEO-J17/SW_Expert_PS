@@ -4,13 +4,14 @@ import java.io.*;
 import java.util.*;
 
 public class 패턴마디의길이_2007 {
-	static String str = "";
-	static StringBuilder sb = new StringBuilder();
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-
+		String str = "";
+		StringBuilder sb = new StringBuilder();
+		
 		for (int i = 0; i < n; i++) {
 			sb.append("#" + (i + 1)).append(" ");
 			str = sc.next();
