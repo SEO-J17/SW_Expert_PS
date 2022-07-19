@@ -12,26 +12,25 @@ public class NO_2_이진수표현 {
 
 		for (int l = 1; l <= tc; l++) {
 			sb.append("#" + l + " ");
-			boolean flag = true;
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int bit = Integer.parseInt(st.nextToken());
-			String num = Integer.toBinaryString(Integer.parseInt(st.nextToken()));
-			int cnt = 0;
-			for (int i = num.length() - 1; i >= 0; i--) {
-				cnt++;
-				if (num.charAt(i) - '0' == 0) {
-					sb.append("OFF").append("\n");
+			int num = Integer.parseInt(st.nextToken());
+			
+			boolean flag = true;
+			for (int i = 0; i < bit; i++) {
+				if ((num & (1 << i)) == 0) {
 					flag = false;
-					break;
-				}
-				if(cnt == bit) {
 					break;
 				}
 			}
 			
-			if(flag) {
-				sb.append("ON").append("\n");
+			if (flag) {
+				sb.append("ON");
+			} else {
+				sb.append("OFF");
 			}
+			sb.append("\n");
+			
 		}
 
 		System.out.println(sb);
