@@ -1,26 +1,25 @@
-package 삼성DX알고리즘;
+package 삼성DX알고리즘.LinkedList;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class NO_5_기초DoubleLinkedList연습 {
+public class NO_4_기초SinglyLinkedList연습 {
 
 	private final static int MAX_NODE = 10000;
 	private final static int ADD_HEAD = 1;
 	private final static int ADD_TAIL = 2;
 	private final static int ADD_NUM = 3;
-	private final static int FIND = 4;
-	private final static int REMOVE = 5;
-	private final static int PRINT = 6;
-	private final static int PRINT_REVERSE = 7;
+	private final static int REMOVE = 4;
+	private final static int PRINT = 5;
 	private final static int END = 99;
 
-	private final static NO_5_UserSolution usersolution = new NO_5_UserSolution();
+	private final static NO_4_UserSolution usersolution = new NO_4_UserSolution();
 
 	private static BufferedReader br;
 
-	public static void run() throws Exception {
+	private static void run() throws Exception {
+
 		int cmd, data, num, ret;
 		int[] output = new int[MAX_NODE];
 		String str;
@@ -48,12 +47,6 @@ public class NO_5_기초DoubleLinkedList연습 {
 				usersolution.addNode2Num(data, num);
 				break;
 
-			case FIND:
-				data = Integer.parseInt(st.nextToken());
-				num = usersolution.findNode(data);
-				System.out.println(num);
-				break;
-
 			case REMOVE:
 				data = Integer.parseInt(st.nextToken());
 				usersolution.removeNode(data);
@@ -61,14 +54,6 @@ public class NO_5_기초DoubleLinkedList연습 {
 
 			case PRINT:
 				ret = usersolution.getList(output);
-				for (int i = 0; i < ret; i++) {
-					System.out.print(output[i] + " ");
-				}
-				System.out.println();
-				break;
-
-			case PRINT_REVERSE:
-				ret = usersolution.getReversedList(output);
 				for (int i = 0; i < ret; i++) {
 					System.out.print(output[i] + " ");
 				}
@@ -83,7 +68,7 @@ public class NO_5_기초DoubleLinkedList연습 {
 
 	public static void main(String[] args) throws Exception {
 		int TC;
-		// System.setIn(new java.io.FileInputStream("res/sample_input.txt"));
+		//System.setIn(new java.io.FileInputStream("res/sample_input.txt"));
 
 		br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();

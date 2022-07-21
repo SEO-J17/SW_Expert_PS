@@ -1,4 +1,4 @@
-package 삼성DX알고리즘;
+package 삼성DX알고리즘.비트연산;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

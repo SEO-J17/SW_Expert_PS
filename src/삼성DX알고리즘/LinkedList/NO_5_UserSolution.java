@@ -1,4 +1,4 @@
-package 삼성DX알고리즘;
+package 삼성DX알고리즘.LinkedList;
 
 class Nodes {
 	public int data;
