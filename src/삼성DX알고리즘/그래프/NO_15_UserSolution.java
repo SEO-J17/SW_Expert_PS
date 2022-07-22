@@ -27,7 +27,6 @@ public class NO_15_UserSolution {
 	int bfs(int ax, int ay, int bx, int by) {
 		cnt = 99999;
 		calc(--ax, --ay, --bx, --by, 0);
-		System.out.println(cnt);
 		if (cnt == 99999) {
 			return -1;
 		} else {
