@@ -29,8 +29,9 @@ public class NO_17_파핑파핑지뢰찾기 {
 				}
 			}
 
-			findBomb();
-
+			findBomb();		//맵을 지뢰가 있는칸, 없는칸을 표시한다.
+			
+			//0이면 연쇄반응을 일으키고 아니면 그냥 방문 처리를 하여 계산한다
 			int click = 0;
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
@@ -40,7 +41,8 @@ public class NO_17_파핑파핑지뢰찾기 {
 					}
 				}
 			}
-
+			
+			//안눌린칸이 있다면 눌러준다.
 			for (int i = 0; i < n; i++) {
 				for (int j = 0; j < n; j++) {
 					if (map[i][j] == '1') {
