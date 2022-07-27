@@ -54,3 +54,4 @@ public class NO_26_단어가등장하는횟수 {
 		System.out.println(sb);
 	}
 }
+//KMP알고리즘 사용
