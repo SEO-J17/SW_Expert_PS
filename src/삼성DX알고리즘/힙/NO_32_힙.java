@@ -16,7 +16,7 @@ public class NO_32_Èü {
 			sb.append("#" + l + " ");
 			int n = Integer.parseInt(br.readLine());
 			PriorityQueue<Integer> qu = new PriorityQueue<>(Collections.reverseOrder());
-
+			
 			for (int i = 0; i < n; i++) {
 				StringTokenizer st = new StringTokenizer(br.readLine());
 				int cmd = Integer.parseInt(st.nextToken());
@@ -30,9 +30,9 @@ public class NO_32_Èü {
 					}
 				}
 			}
-
+			
 			sb.append("\n");
-
+			
 		}
 
 		System.out.println(sb);
