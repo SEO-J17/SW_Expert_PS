@@ -17,33 +17,32 @@ public class NO_34_중간값구하기 {
 			sb.append("#" + l + " ");
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int n = Integer.parseInt(st.nextToken());
-			int first = Integer.parseInt(st.nextToken());
 			PriorityQueue<Integer> min_qu = new PriorityQueue<>(); // 최소힙
 			PriorityQueue<Integer> max_qu = new PriorityQueue<>(Collections.reverseOrder()); // 최대 힙
-			min_qu.add(first);
+			max_qu.add(Integer.parseInt(st.nextToken()));
 
-			int mid = first;
-			int result = 0;
+			int mid = 0;
+			long result = 0;
 			for (int i = 0; i < n; i++) {
 				st = new StringTokenizer(br.readLine());
-				for (int j = 0; j < 2; j++) {
-					int num = Integer.parseInt(st.nextToken());
-					if (num >= mid) {
-						min_qu.add(num);
-					} else if (num < mid) {
-						max_qu.add(num);
+				min_qu.add(Integer.parseInt(st.nextToken()));
+				max_qu.add(Integer.parseInt(st.nextToken()));
+
+				if (max_qu.size() < min_qu.size()) {
+					while (max_qu.size() < min_qu.size()) {
+						max_qu.add(min_qu.poll());
 					}
 				}
-				if (min_qu.size() > max_qu.size()) {
-					mid = min_qu.peek();
-				} else if (min_qu.size() < max_qu.size()) {
-					mid = max_qu.peek();
-				}
 				
-				result += (mid % 20171109);
+				if (max_qu.peek() > min_qu.peek()) {
+					int temp = min_qu.poll();
+					min_qu.add(max_qu.poll());
+					max_qu.add(temp);
+				}
+				result += max_qu.peek();
 			}
 
-			sb.append(result).append("\n");
+			sb.append(result % 20171109).append("\n");
 
 		}
 		System.out.println(sb);
