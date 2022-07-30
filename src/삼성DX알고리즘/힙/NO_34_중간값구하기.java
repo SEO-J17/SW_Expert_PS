@@ -3,7 +3,6 @@ package 삼성DX알고리즘.힙;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
@@ -21,7 +20,6 @@ public class NO_34_중간값구하기 {
 			PriorityQueue<Integer> max_qu = new PriorityQueue<>(Collections.reverseOrder()); // 최대 힙
 			max_qu.add(Integer.parseInt(st.nextToken()));
 
-			int mid = 0;
 			long result = 0;
 			for (int i = 0; i < n; i++) {
 				st = new StringTokenizer(br.readLine());
