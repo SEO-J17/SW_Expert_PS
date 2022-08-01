@@ -27,7 +27,7 @@ public class NO_37_염라대왕의이름정렬 {
 					if (o1.length() == o2.length()) {
 						return o1.compareTo(o2);
 					} else {
-						return o1.length() - o2.length();
+						return o1.length() - o2.length();		//리턴값이 음수면 정렬유지, 양수면 교체, 같아도 유지 이다.
 					}
 				}
 			});
