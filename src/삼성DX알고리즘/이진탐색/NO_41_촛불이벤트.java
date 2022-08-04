@@ -32,7 +32,7 @@ public class NO_41_√–∫“¿Ã∫•∆Æ {
 			}
 			sb.append(layer).append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 
 }
