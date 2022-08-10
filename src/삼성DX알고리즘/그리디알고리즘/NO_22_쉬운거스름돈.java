@@ -14,7 +14,6 @@ public class NO_22_쉬운거스름돈 {
 			sb.append("#" + l + "\n");
 			int n = Integer.parseInt(br.readLine());
 			int arr[] = { 50000, 10000, 5000, 1000, 500, 100, 50, 10 };
-			int result[] = new int[8];
 
 			for (int i = 0; i < 8; i++) {
 				int money = arr[i];
@@ -27,10 +26,10 @@ public class NO_22_쉬운거스름돈 {
 						break;
 					}
 				}
-				result[i] = cnt;
+				arr[i] = cnt;
 			}
 
-			for (int d : result) {
+			for (int d : arr) {
 				sb.append(d).append(" ");
 			}
 			sb.append("\n");
